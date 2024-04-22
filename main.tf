@@ -14,14 +14,12 @@ resource "aws_rds_cluster" "default" {
 }
 
 resource "aws_rds_cluster_parameter_group" "default" {
-  for_each = var.rds
   name        = "${var.env}-${var.name}-roboshop-rds"
   family      = "aurora5.6"
   description = "RDS default cluster parameter group"
 }
 
 resource "aws_db_subnet_group" "default" {
-  for_each = var.rds
   name       = "${var.env}-${var.name}-roboshop-rds"
   subnet_ids = var.subnets
 
