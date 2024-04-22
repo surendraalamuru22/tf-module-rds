@@ -1,3 +1,6 @@
-variable "rds" {}
 variable "env" {}
 variable "subnets" {}
+variable "engine_version" {}
+variable "engine" {}
+variable "skip_final_snapshot" {}
+variable "name" {}
